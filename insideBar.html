@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/insideBar.css" />
+    <title>shǒushìlìng!</title>
+  </head>
+  <body id="insideBarBody">
+    <!-- BACKGROUND IMAGE -->
+    <img
+      class="insideBarImg"
+      src="./assets/img/bar.jpg"
+      alt="Inside the Bar ambience rustique medieval"
+    />
+    <!-- RETURN ARROW -->
+    <a class="arrowLeft" href="./bar.html"
+      ><img
+        class="arrowLeftImg"
+        src="./assets/img/1arrowToLeftGreen.png"
+        alt="arrow to go back"
+    /></a>
+    <!-- RULES MODAL BTN -->
+    <button id="rulesInGameBtn">RULES</button>
+    <!--------------- START GAME INTERFACE BOX --------------->
+    <div id="gameBox">
+      <div id="gameGrid">
+        <h1>shǒushìlìng!</h1>
+        <div id="playersBox">
+          <div id="player">
+            <p>YOU</p>
+            <button id="chooseCharBtn">CHOOSE<br />CHAR</button>
+            <img id="playerCharImg" src="" />
+            <p id="playerStreak"></p>
+          </div>
+          <div id="npc">
+            <p>NPC</p>
+            <img id="npcCharImg" src="" />
+            <p id="npcStreak"></p>
+          </div>
+        </div>
+        <div id="showCombat">
+          <img id="playerChoiceBox" src="" />
+          <p id="vs">VS</p>
+          <img id="npcChoiceBox" src="" />
+        </div>
+        <div id="showResultBox">
+          <div id="showResult">
+            <div id="result"></div>
+            <button id="playBtn">PLAY!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------- CHOOSE CHAR Modal --------------->
+
+    <!-- The Modal -->
+    <div id="charModal" class="charModal">
+      <!-- Modal content -->
+      <div class="charModalContent">
+        <span class="charClose">&times;</span>
+        <div>
+          <img
+            id="playerOneImg"
+            class="playerImg"
+            src="./assets/img/p1good.png"
+            alt="First Char"
+          />
+          <p>Li Jing</p>
+          <img
+            id="playerTwoImg"
+            class="playerImg"
+            src="./assets/img/p2good.png"
+            alt="Second Char"
+          />
+          <p>Chang</p>
+        </div>
+        <div>
+          <img
+            id="playerThreeImg"
+            class="playerImg"
+            src="./assets/img/p3good.png"
+            alt="Third Char"
+          />
+          <p>Koshing</p>
+          <img
+            id="playerFourImg"
+            class="playerImg"
+            src="./assets/img/p4good1.png"
+            alt="Fourth Char"
+          />
+          <p>Wang Xiu</p>
+        </div>
+      </div>
+    </div>
+    <!--------------- END CHOOSE CHAR Modal --------------->
+
+    <!--------------- CHOOSE PLAY modal --------------->
+    <div id="playModal" class="playModal">
+      <!-- Modal content -->
+      <div class="playModalContent">
+        <span class="playClose">&times;</span>
+        <div>
+          <img id="frog" src="./assets/img/secondHand.jpg" alt="Choose Frog" />
+          <p>Frog</p>
+          <img id="snake" src="./assets/img/thirdHand.jpg" alt="Choose Snake" />
+          <p>Snake</p>
+          <img
+            id="centipede"
+            src="./assets/img/firstHand.jpg"
+            alt="Choose Centipede"
+          />
+          <p>Centipede</p>
+        </div>
+      </div>
+    </div>
+    <!--------------- endOf CHOOSE PLAY-MOVE MODAL --------------->
+
+    <!--------------- RULES IN GAME MODAL --------------->
+    <div id="rulesModal" class="rulesModal">
+      <!-- Modal content -->
+      <div class="rulesModalContent">
+        <span class="rulesClose">&times;</span>
+        <div>
+          <p>RULES</p>
+          <img id="rulesImg" src="./assets/img/rules.jpg" alt="rules image" />
+        </div>
+      </div>
+    </div>
+    <!--------------- endOf RULES IN GAME MODAL --------------->
+
+    <script src="./assets/js/insideBar.js"></script>
+  </body>
+</html>

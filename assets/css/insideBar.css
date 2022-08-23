@@ -1,0 +1,295 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.2rem #94a083;
+}
+#gameBox {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+p {
+  text-align: center;
+}
+.insideBarImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.arrowLeft {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  z-index: 2;
+}
+#gameGrid {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: fit-content;
+}
+#playersBox {
+  display: flex;
+}
+#playersBox p {
+  text-align: center;
+}
+#player {
+  display: block;
+}
+#playerCharImg {
+  width: 6rem;
+  display: none;
+}
+#npcCharImg {
+  width: 6rem;
+  margin-left: 2rem;
+  border-radius: 1rem;
+}
+#showCombat {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+}
+#vs {
+  display: none;
+  text-shadow: 0.2rem 0.2rem 0.2rem red;
+  font-size: 2.1rem;
+  padding: 2.5rem 0.5rem;
+}
+#playerChoiceBox {
+  width: 6rem;
+  border-radius: 1rem;
+}
+#npcChoiceBox {
+  width: 6rem;
+  border-radius: 1rem;
+}
+#showResultBox {
+  display: flex;
+  justify-content: center;
+}
+#showResult {
+  display: block;
+  align-items: center;
+}
+#result {
+  font-size: 3rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem red;
+}
+#playBtn {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0 0.2rem 0 0.2rem;
+  background-color: white;
+  border: 0.3rem solid #94a083;
+  color: #94a083;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+/* 
+==== MODALS ==== 
+*/
+
+/* ==== CHOOSE CHAR MODAL ==== */
+#chooseCharBtn {
+  position: relative;
+  z-index: 3;
+  padding: 1.8rem 1rem 1.8rem 1rem;
+  margin: 0 0.2rem 0 0.2rem;
+  background-color: white;
+  border: 0.3rem solid #94a083;
+  color: #94a083;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.charModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.charModalContent {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #666;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0.5rem;
+  border: 0.3rem solid #94a083;
+  border-radius: 2rem;
+  width: max-content; /* Could be more or less, depending on screen size */
+  flex-wrap: wrap;
+}
+.charModalContent img {
+  object-fit: contain;
+  padding: 0.1rem;
+  width: 6rem;
+  height: 6rem;
+}
+.charModalContent div {
+  padding: 0;
+  margin: 0;
+}
+.charModalContent p {
+  padding: 0;
+  margin: 0;
+}
+/* The Close Button */
+.charClose {
+  color: #94a083;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.charClose:hover,
+.charClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ==== CHOOSE PLAY MODAL ==== */
+
+#playBtn {
+  position: relative;
+  z-index: 3;
+}
+.playModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.playModalContent {
+  display: flex;
+  justify-content: center;
+  background-color: #666;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0.5rem;
+  border: 0.3rem solid #94a083;
+  border-radius: 2rem;
+  width: max-content; /* Could be more or less, depending on screen size */
+  flex-wrap: wrap;
+}
+.playModalContent img {
+  object-fit: contain;
+  padding: 0.1rem;
+  width: 6rem;
+  height: 6rem;
+}
+.playModalContent div {
+  padding: 0;
+  margin: 0;
+}
+.playModalContent p {
+  padding: 0;
+  margin: 0;
+}
+/* The Close Button */
+.playClose {
+  color: #94a083;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.playClose:hover,
+.playClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ====  RULES in GAME  MODAL ==== */
+
+#rulesInGameBtn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 0.8rem 2.5rem;
+  margin: 0.7rem;
+  margin-top: 1rem;
+  z-index: 2;
+  background-color: white;
+  border: 0.3rem solid #94a083;
+  color: #94a083;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.rulesModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.rulesModalContent {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #666;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0.5rem;
+  border: 0.3rem solid #94a083;
+  border-radius: 2rem;
+  width: max-content; /* Could be more or less, depending on screen size */
+  flex-wrap: wrap;
+}
+.rulesModalContent img {
+  object-fit: contain;
+  padding: 0.1rem;
+  width: 18rem;
+  height: 18rem;
+}
+.charModalContent div {
+  padding: 0;
+  margin: 0;
+}
+.charModalContent p {
+  padding: 0;
+  margin: 0;
+}
+/* The Close Button */
+.rulesClose {
+  color: #94a083;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.rulesClose:hover,
+.rulesClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*
+==== endOf MODALS ==== 
+ */

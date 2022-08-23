@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Permanent Marker', cursive;
+    position: fixed;
+}
+#indexBody{
+    color: #93A082;
+    background-color: black;
+    text-align: center;
+    overflow: scroll;
+}
+#indexBody header{
+    display: block;
+    align-content: center;
+    padding: 0.5rem;
+}
+
+#indexBody a{
+    text-decoration: none;
+}
+#enterHan{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+}
+#enterHan button{
+    border: solid 0.2rem #93A082;
+    background-color: black;
+    color: #93A082;
+    font-size: large;
+    font-family: 'Permanent Marker', cursive;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.indexBackground{
+    object-fit: cover;
+    width: 100%;
+    height: 12rem;
+}
+.arrowLeft {
+    width: 10rem;
+}
+.arrowLeftImg{
+    height: 3rem;
+}
+@media (min-width: 760px) {
+    .arrowLeftImg{
+      height: 6rem;
+    }  
+  }
+@media (max-height: 750px){
+    #html,body{
+        font-size: 0.9rem;
+    }
+}
