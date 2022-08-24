@@ -3,54 +3,25 @@
 //
 
 // get players images
-// var playerImg = document.querySelectorAll(".playerImg")
-var playerOne = document.getElementById("playerOneImg");
-var playerTwo = document.getElementById("playerTwoImg");
-var playerThree = document.getElementById("playerThreeImg");
-var playerFour = document.getElementById("playerFourImg");
+var playerImg = document.querySelectorAll(".playerImg")
 
 // connecting the box to be able to assign the player chossed img to it
 var playerImgBox = document.getElementById("playerCharImg");
 
-// L OBSOLETE OPTIMIZEE RESTE OBSOLETE
-// let i
-// for(i=0; i<4 ; i++){
-//   playerImg[i].addEventListener("click", () => {
-//     console.log(playerImg)
-//     console.log(i)
-//     console.log(this)
-//     playerImgBox.src = this.src
-//     playerImgBox.style.display = "block";
-//     chooseCharModal.style.display = "none";
-//     chooseCharBtn.style.display = "none";
-//     playBtn.style.display = "block";
-//   })
-// }
+// common changes related to choosing player image
 function changesRelatedToPlayerImg() {
   playerImgBox.style.display = "block";
   chooseCharModal.style.display = "none";
   chooseCharBtn.style.display = "none";
   playBtn.style.display = "block"; // show play btn ater char choice
 }
-
-// all possible choices and events connected to choosing CHAR img
-playerOne.addEventListener("click", () => {
-  playerImgBox.src = playerOne.src;
-  changesRelatedToPlayerImg()
+//event on array os Images to be able to choose them and apply related changes
+playerImg.forEach(Img => {
+  Img.addEventListener('click', (e) => {
+    playerImgBox.src = e.target.src
+    changesRelatedToPlayerImg()
+  })
 });
-playerTwo.addEventListener("click", () => {
-  playerImgBox.src = playerTwo.src;
-  changesRelatedToPlayerImg()
-});
-playerThree.addEventListener("click", () => {
-  playerImgBox.src = playerThree.src;
-  changesRelatedToPlayerImg()
-});
-playerFour.addEventListener("click", () => {
-  playerImgBox.src = playerFour.src;
-  changesRelatedToPlayerImg()
-});
-// TEST // console.log(event.target) inside event    (event)
 
 // ==== CHOOSE CHAR MODAL ==== //
 
