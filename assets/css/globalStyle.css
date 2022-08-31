@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html, body{
+    /* width: 100vw; */
+    /* height: 100vh; */
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Permanent Marker', cursive;
+    /* position: fixed; */
+}
+
+.arrowLeft {
+    width: 10rem;
+}
+.arrowLeftImg{
+    height: 3rem;
+}
+@media (min-width: 760px) {
+    .arrowLeftImg{
+      height: 6rem;
+    }  
+  }
+@media (max-height: 750px){
+    #html,body{
+        font-size: 0.9rem;
+    }
+}

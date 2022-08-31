@@ -1,5 +1,6 @@
 .backgroundBarOutside{
     position: absolute;
+    display: flex;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -13,16 +14,21 @@
 }
 .rulesContainer{
     display: flex;
+    position: relative;
+    height: 20rem;
     justify-content: space-between;
     flex-direction: column;
     padding: 1rem 2rem;
+    align-self: center;
 }
 .rules{
+    position: relative;
     z-index:2;
 }
 .enterBar{
     /* position: fixed; */
     z-index: 2;
+    position: relative;
     /* bottom: 1rem; */
     /* padding: 2rem; */
     border: solid 0.2rem #93A082;
@@ -35,8 +41,10 @@
     border-radius: 2rem;
     cursor: pointer;
     text-align: center;
+    flex-wrap: wrap;
 }
 a{
+    position: relative;
     text-decoration: none;
     color: white;
 }

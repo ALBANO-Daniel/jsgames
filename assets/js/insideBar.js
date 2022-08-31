@@ -181,18 +181,18 @@ function combat(playerChoice, npcChoice) {
 //get NPC image box 
 var npcImgBox = document.getElementById("npcCharImg");
 //default
-npcImgBox.src = './assets/img/botWaiting.gif';
+npcImgBox.src = './assets/img/1botWaiting.gif';
 // npcImgBox.src = "http://127.0.0.1:5500/assets/img/botWaiting.gif";
 function npcAfterPlay(props) {
 
   // props = win , lose , streakWin, streakLose
   switch (props) {
     case "npcWin":
-      npcImgBox.src = "./assets/img/botWinner.gif";
+      npcImgBox.src = "./assets/img/1botWinner.gif";
       // npcImgBox.src = "http://127.0.0.1:5500/assets/img/botWinner.gif";
       break;
     case "playerWin":
-      npcImgBox.src = "./assets/img/botLoser.gif";
+      npcImgBox.src = "./assets/img/1botLoser.gif";
       // npcImgBox.src = "http://127.0.0.1:5500/assets/img/botLoser.gif";
       //   TO BE IMPLEMENTED !!    ticket = #0134
       break;
@@ -203,7 +203,7 @@ function npcAfterPlay(props) {
     //   npcImgBox.src = 'http://127.0.0.1:5500/assets/img/botCrying.gif'
     //   break
     default:
-      npcImgBox.src = "./assets/img/botWaiting.gif";
+      npcImgBox.src = "./assets/img/1botWaiting-mobile.gif";
   }
 }
 //
