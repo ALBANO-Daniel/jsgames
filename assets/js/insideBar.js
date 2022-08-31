@@ -76,6 +76,7 @@ var centipede = document.getElementById("centipede");
 let npcChoice;
 playBtn.addEventListener("click", () => {
   npcChoiceBox.style.display = "none";
+  playerChoiceBox.style.display= "none";
   vs.style.display = "block";
   let npcPlay = Math.floor(Math.random() * 3);
   // SNAKE - 0  // FROG - 1  // CENTIPEDE - 2
@@ -123,14 +124,17 @@ centipede.addEventListener("click", () => {
 var showResultBox = (result) => {
   switch (result) {
     case "tie":
+      playerChoiceBox.style.display= "block";
       showResult.style.display = "block";
       showResult.innerHTML = "TIE !";
       break;
     case "npcWin":
+      playerChoiceBox.style.display= "block";
       showResult.style.display = "block";
       showResult.innerHTML = "LOSE !";
       break;
     default:
+      playerChoiceBox.style.display= "block";
       showResult.style.display = "block";
       showResult.innerHTML = "WIN !";
       break;

@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   color: white;
-  text-shadow: 0.2rem 0.2rem 0.2rem #94a083;
+  /* text-shadow: 0.2rem 0.2rem 0.2rem #94a083; */
 }
 #gameBox {
   display: flex;
@@ -79,21 +79,26 @@ p {
   justify-content: center;
 }
 #showResult {
-  display: block;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }
 #result {
   font-size: 3rem;
   text-shadow: 0.2rem 0.2rem 0.2rem red;
 }
 #playBtn {
+  width: 60%;
+  height: 3rem;
   padding: 0.5rem 2rem 0.5rem 2rem;
   margin: 0 0.2rem 0 0.2rem;
   background-color: white;
   border: 0.3rem solid #94a083;
   color: #94a083;
+  font-size: larger;
   font-weight: bold;
   border-radius: 1rem;
+  /* text-shadow: 0.2rem 0.2rem 0.2rem red; */
 }
 
 /* 

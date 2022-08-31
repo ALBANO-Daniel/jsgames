@@ -1,3 +1,8 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    
+}
 .backgroundBarOutside{
     position: absolute;
     display: flex;
@@ -9,26 +14,29 @@
 .arrowLeft{
     position: relative;
     display: block;
+    height: 10%;
     padding: 1rem;
     z-index: 2;
+    text-decoration: none;
 }
 .rulesContainer{
     display: flex;
-    position: relative;
-    height: 20rem;
-    justify-content: space-between;
     flex-direction: column;
-    padding: 1rem 2rem;
-    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 80%;
+    /* padding: 1rem 2rem; */
 }
 .rules{
-    position: relative;
+    height: 100%;
+    width: 90%;
     z-index:2;
+    object-fit: contain;
 }
 .enterBar{
     /* position: fixed; */
     z-index: 2;
-    position: relative;
     /* bottom: 1rem; */
     /* padding: 2rem; */
     border: solid 0.2rem #93A082;
@@ -40,11 +48,7 @@
     padding: 1rem;
     border-radius: 2rem;
     cursor: pointer;
-    text-align: center;
-    flex-wrap: wrap;
-}
-a{
     position: relative;
     text-decoration: none;
-    color: white;
+    color: #93A082;
 }
