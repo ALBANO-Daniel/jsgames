@@ -122,20 +122,18 @@ centipede.addEventListener("click", () => {
 });
 // function: show result of combat( to be used in combat function )
 var showResultBox = (result) => {
+
+  playerChoiceBox.style.display= "block";
+  showResult.style.display = "block";
+
   switch (result) {
     case "tie":
-      playerChoiceBox.style.display= "block";
-      showResult.style.display = "block";
       showResult.innerHTML = "TIE !";
       break;
     case "npcWin":
-      playerChoiceBox.style.display= "block";
-      showResult.style.display = "block";
       showResult.innerHTML = "LOSE !";
       break;
     default:
-      playerChoiceBox.style.display= "block";
-      showResult.style.display = "block";
       showResult.innerHTML = "WIN !";
       break;
   }
@@ -185,7 +183,7 @@ function combat(playerChoice, npcChoice) {
 //get NPC image box 
 var npcImgBox = document.getElementById("npcCharImg");
 //default
-npcImgBox.src = './assets/img/1botWaiting.gif';
+npcImgBox.src = './assets/img/1botWaiting-mobile.gif';
 // npcImgBox.src = "http://127.0.0.1:5500/assets/img/botWaiting.gif";
 function npcAfterPlay(props) {
 
